@@ -5,7 +5,9 @@ import {
 
   export const FontFamily = {
     Norms_Bold : "TTNorms-Bold",
-    Norms_Black : "TTNorms-Black"
+    Norms_Black : "TTNorms-Black",
+    Norms_Medium : "TTNorms-Medium",
+
   }
 
   export const FontSize = {
