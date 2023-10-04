@@ -5,8 +5,8 @@ import Carousel from 'react-native-snap-carousel';
 
 const Dashboard = () => {
   return (
-    <View>
-      <Text>Dashboard</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Dashboard</Text>
     </View>
   )
 }
