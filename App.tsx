@@ -1,10 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import Navigator from './src/Navigation/Navigator'
 
 const App = () => {
   return (
-    <View>
-      <Text>App</Text>
+    <View style={{flex:1}}>
+      <Navigator />
     </View>
   )
 }
