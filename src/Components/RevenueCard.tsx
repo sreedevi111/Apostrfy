@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ccc',
     width: wp(18),
+    marginVertical:hp(2)
   },
   cardNormalBackground: {
     backgroundColor: '#FBDEB54D',

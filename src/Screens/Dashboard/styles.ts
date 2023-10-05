@@ -25,6 +25,9 @@ const styles = StyleSheet.create({
   },
   statBox: {
     backgroundColor: 'white',
+    marginVertical: hp(3),
+    borderRadius: wp(3),
+    width: wp(95),
   },
   row1: {
     flexDirection: 'row',
@@ -45,15 +48,19 @@ const styles = StyleSheet.create({
     color: '#F36821',
     fontFamily: FontFamily.Norms_Medium,
   },
-  availabilityRow:{
-    flexDirection:'row'
+  availabilityRow: {
+    flexDirection: 'row',
   },
-  dotRow:{
-flexDirection:'row',
-alignItems:'center',
- width:wp(33),
-//  borderWidth:1,
- justifyContent:'space-around'
+  calenderBox: {
+    backgroundColor: 'white',
+    margin: hp(2),
+    borderRadius: wp(2),
+  },
+  dotRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: wp(33),
+    justifyContent: 'space-around',
   },
   revenueText: {
     alignSelf: 'center',
@@ -65,6 +72,25 @@ alignItems:'center',
   revenueRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  contactCard: {
+    backgroundColor: 'white',
+    width: wp(90),
+    height: hp(9),
+    marginVertical: hp(3),
+    alignSelf: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: wp(3),
+    borderRadius: wp(3),
+  },
+  icon: {
+    margin: wp(1),
+  },
+  contactText: {
+    fontFamily: FontFamily.Norms_Bold,
+    color: '#052027',
   },
 });
 
