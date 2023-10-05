@@ -15,6 +15,16 @@ export interface CarouselCardProps {
   image: any;
 }
 
+export const renderCarouselItem = ({item}) => (
+  <CarouselCard
+    image={item.image}
+    title={item.title}
+    date1={item.date1}
+    date2={item.date2}
+    note={item.note}
+  />
+);
+
 const CarouselCard = ({
   title,
   date1,
@@ -35,9 +45,15 @@ const CarouselCard = ({
           <Text style={styles.dateText}>{date2}</Text>
         </View>
       </View>
-      <Text>{note}</Text>
+      <Text style={styles.noteText}>{note}</Text>
 
-      <View style={{flexDirection: 'row', alignItems: 'center'}}>
+      <View
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          width: wp(18),
+          justifyContent: 'space-between',
+        }}>
         <Text style={styles.details}>Details</Text>
         <Image source={arrowRight} />
       </View>
@@ -50,18 +66,18 @@ export default CarouselCard;
 const styles = StyleSheet.create({
   container: {
     width: wp(60),
-    height: hp(38),
+    height: hp(42),
     backgroundColor: 'white',
     flex: 1,
     padding: hp(2),
-    borderRadius:wp(3)
+    borderRadius: wp(3),
   },
   imgStyle: {
     borderRadius: wp(3),
   },
   title: {
     fontFamily: FontFamily.Norms_Bold,
-    fontSize: FontSize.h1_9,
+    fontSize: FontSize.h2_3,
     color: '#1E293B',
     marginVertical: hp(1),
   },
@@ -73,15 +89,21 @@ const styles = StyleSheet.create({
     width: wp(22),
     height: hp(4),
     borderRadius: wp(2),
-    marginHorizontal: wp(2),
+    marginRight: wp(3),
     alignItems: 'center',
     justifyContent: 'center',
   },
   dateText: {
     color: '#000',
+    fontFamily: FontFamily.Norms_Bold,
+    fontSize: FontSize.h1_5,
   },
   details: {
     color: '#F36821',
     fontFamily: FontFamily.Norms_Medium,
+  },
+  noteText: {
+    fontFamily: FontFamily.Norms_Medium,
+    marginVertical: hp(2),
   },
 });

@@ -1,39 +1,26 @@
-import React, {useState} from 'react';
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
-import {FontFamily} from '../Utils/Fonts';
+import { FontFamily } from '../Utils/Fonts';
 
 interface RevenueCardProps {
   text: string;
+  isSelected: boolean; // To determine if the card is currently selected
+  onPress: () => void; // Callback for when the card is pressed
 }
 
-const RevenueCard: React.FC<RevenueCardProps> = ({text}) => {
-  const [isPressed, setIsPressed] = useState(false);
-
-  const handlePressIn = () => {
-    setIsPressed(true);
-  };
-
-  const handlePressOut = () => {
-    setIsPressed(false);
-  };
-
+const RevenueCard: React.FC<RevenueCardProps> = ({ text, isSelected, onPress }) => {
   return (
-    <TouchableOpacity
-      onPressIn={handlePressIn}
-      onPressOut={handlePressOut}
-      activeOpacity={1}>
+    <TouchableOpacity onPress={onPress} activeOpacity={0.7}>
       <View
         style={[
           styles.card,
-          isPressed
-            ? styles.cardPressedBackground
-            : styles.cardNormalBackground,
+          isSelected ? styles.cardPressedBackground : styles.cardNormalBackground,
         ]}>
-        <Text style={isPressed ? styles.textPressed : styles.textNormal}>
+        <Text style={isSelected ? styles.textPressed : styles.textNormal}>
           {text}
         </Text>
       </View>
@@ -50,7 +37,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ccc',
     width: wp(18),
-    marginVertical:hp(2)
+    marginVertical: hp(2)
   },
   cardNormalBackground: {
     backgroundColor: '#FBDEB54D',

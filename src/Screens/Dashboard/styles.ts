@@ -48,6 +48,42 @@ const styles = StyleSheet.create({
     color: '#F36821',
     fontFamily: FontFamily.Norms_Medium,
   },
+  barContainer: {
+    flex: 1,
+    alignItems: 'center',
+  },
+
+  barGraph: {
+    alignSelf: 'center',
+    // overflow: 'hidden', // Use 'hidden' and let ScrollView handle the scrolling
+    borderWidth: 1,
+  },
+
+  dataRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'flex-end',
+   marginVertical:hp(3)
+  },
+  percentage: {
+    color: '#F5B42B',
+    fontSize: FontSize.h1_7,
+    fontFamily: FontFamily.Norms_Bold,
+  },
+  rate: {
+    color: '#F5B42B',
+    fontFamily: FontFamily.Norms_Bold,
+    height: hp(3),
+    alignItems:'center',
+    textAlign:'center'
+
+  },
+  rateText: {
+    color: '#1A1A1A',
+    fontFamily: FontFamily.Norms_Medium,
+    fontSize: FontSize.h2_1,
+    marginTop:hp(2)
+  },
   availabilityRow: {
     flexDirection: 'row',
   },
@@ -61,6 +97,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: wp(33),
     justifyContent: 'space-around',
+    marginBottom: hp(3),
+  },
+  availableText: {
+    fontFamily: FontFamily.Norms_Medium,
+    fontSize: FontSize.h1_8,
+    color: '#000',
   },
   revenueText: {
     alignSelf: 'center',
@@ -72,6 +114,13 @@ const styles = StyleSheet.create({
   revenueRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  discoverText: {
+    color: '#000',
+    fontFamily: FontFamily.Norms_Bold,
+    fontSize: FontSize.h2_1,
+    marginVertical: hp(2),
+    paddingLeft: wp(3),
   },
   contactCard: {
     backgroundColor: 'white',
