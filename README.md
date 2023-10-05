@@ -24,6 +24,8 @@ Apostrfy is a React Native application that provides a comprehensive dashboard f
 ### Contact Us:
   - Provides quick contact options including call, email, and WhatsApp.
 
+### Tab Navigation:
+  - **Implemented Tab Navigation**: Allows users to easily navigate between different sections or features of the application. Each tab represents a distinct feature or functionality.
 ## Dependencies
 
 - `react-native-calendars`: For the interactive calendar.
