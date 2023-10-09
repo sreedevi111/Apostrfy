@@ -55,7 +55,6 @@ const styles = StyleSheet.create({
 
   barGraph: {
     alignSelf: 'center',
-    // overflow: 'hidden', // Use 'hidden' and let ScrollView handle the scrolling
     borderWidth: 1,
   },
 

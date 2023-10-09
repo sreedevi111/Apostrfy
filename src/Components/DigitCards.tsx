@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
     borderRadius: wp(3),
     alignItems: 'center',
     justifyContent: 'center',
-    // marginLeft:wp(2)
   },
   textStyle: {
     color: '#000000',

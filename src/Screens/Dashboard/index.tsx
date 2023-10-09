@@ -5,8 +5,6 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
-// import {BarChart, Grid, XAxis, YAxis} from 'react-native-svg-charts';
-// import {Rect} from 'react-native-svg';
 import {BarChart} from 'react-native-gifted-charts';
 
 import styles from './styles';
@@ -80,10 +78,7 @@ const Dashboard = () => {
           </View>
         </View>
 
-        {/* <ScrollView contentContainerStyle={styles.barContainer}> */}
-        {/* <View style={styles.barGraph}> */}
         <BarChart
-          // width={300}
           data={barData}
           onPress={(item, index) => {
             console.log('item', index);
@@ -98,8 +93,6 @@ const Dashboard = () => {
           showLine={false}
           hideRules={true}
         />
-        {/* </View> */}
-        {/* </ScrollView> */}
 
         <View style={styles.dataRow}>
           <View>
